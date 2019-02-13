@@ -86,8 +86,48 @@
             } else {
 
                 console.log("You pleaded not guilty")
+                alert(
+                    "You look into the eyes of the jurors and begin to explain why you disagree with the charges you have been accussed of. You claim that if the jury and regular athenians are, as they claim, 'improvers of youth', then one man cannot undo all the improvement of so many. You also claim that you must believe in Gods since you believe in the influence of Gods. To do so would be like believing in flute music, but not a flute player."
+                )
+
+                var suggest = confirm(
+                    "The jury hears your defense and proceed to deliberate your fate. After they cast their votes, you are still convicted guilty of all charges. You are sentenced to death by Hemlock. However, they do allow a chance to suggest another punishment. Do you suggest an alternative?"
+                )
+
+                if (suggest) {
+
+                    console.log("You suggested another punishment")
+
+                } else {
+
+                    console.log("You agreed to death by Hemlock")
+                    var continueDeath = confirm(
+                        "You raise your head up high and announce that you accept the punishment. In fact you insist that the Hemlock be brought our now. You explain that the law has passed its judgement and ensure them that there is no need to prolong your fate. You are handed the drink and catch a whiff of its lethal aroma. Do you continute to drink the Hemlock?"
+                    )
+
+                    if (continueDeath) {
+
+                        console.log("You drank the Hemlock")
+                        alert(
+                            "As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your friends look on in horror. Although those close to you did not get a chance to understand your insistance on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history."
+                        )
+                        document.write(
+                            "<h1>You are remembered fondly.</h1><p>Refresh the page to play again.</p>")
+
+                    } else {
+
+                        console.log("You didn't drink the Hemlock")
+                        alert(
+                            "You stare at the full goblet in your hands, and a wave of fear rushes into your body. Your hands loosen their grip and the drink slips through, falling to the ground. You make a mad sprint towards a clearing in the small crowd around you. Just as you are about to get through, a spear pierces you from behind and pins you to the ground. Everyone looks at you with hatred and disgust. Your followers lose all respect for you and your ideas and your teaching are mocked throughout all of Athens."
+                        )
+                        document.write(
+                            "<h1>You are remembered as a coward.</h1><p>Refresh the page to play again.</p>")
 
 
+                    }
+
+
+                }
             }
         }
     </script>
