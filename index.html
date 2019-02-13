@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Socrates Game</title>
+
+    <style>
+        button {
+            background-color: red;
+            color: white;
+        }
+
+        #picture {
+            width: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>The Death of Socrates</h1>
+
+    <img id="picture" src="socrates.jpg">
+
+    <p>Follow the trial of Socrates by making decisions as him.<br>Find the historical ending, or create a new one.</p>
+    <p>Open up the Console to track your choices</p>
+    <p>"OK" is Yes, "Cancel" is No</p>
+
+
+    <button onclick="playGame()">Press to play</button>
+
+    <script>
+        function playGame() {
+
+            var agree = confirm(
+                "It is the year 399 BC and you are the great philosopher Socrates. The City of Athens has put you on trial by jury for refusing to recognize the Gods of the state and corruption of the youth. Do you agree with the charges?"
+            )
+
+            if (agree) {
+
+                console.log("You agreed to the charges")
+                var apologize = confirm(
+                    "The jury now asks that you apologize for denying the Gods and tainting the young minds of the city. Do you apologize?"
+                )
+
+                if (apologize) {
+
+                    console.log("You apologized to the jury")
+                    var stopPhil = confirm(
+                        "You plead with the jury to forgive you of your crimes. After deliberation, the jury accepts. However, they then demand that you agree to never share your teachings and ideas to anyone else. If consent to you do so, your punishment will be much less severe. Do you agree to stop spreading your philosophical ideas?"
+                    )
+
+                    if (stopPhil) {
+
+                        console.log("You stopped teaching Philosophy")
+                        alert(
+                            "The jury accepts your promise to never again share your brilliant mind with others. You are charged with a small fee which your friends agree to pay for you. You continue living in Athens, not as a great Philosopher of your time, but as a common old man. Your actions have proved inconsequential and your teaching are lost to time."
+                        )
+                        document.write("<h1>You are forgotten.</h1><p>Refresh the page to play again.</p>")
+
+                    } else {
+
+                        console.log("You refused to stop teaching Philosophy")
+                        alert(
+                            "You refuse to stop your teachings. You try to convince the jury why Athens and the world need people to question everything in order to learn an grow. However, the jury does not look kindly on your words and you are sentenced to life in prison. Your friends remember you fondly, but the main tenets of your teachings are weakened after your apology."
+                        )
+                        document.write(
+                            "<h1>Many of your teachings are lost.</h1><p>Refresh the page to play again.</p>")
+                    }
+
+                } else {
+
+                    console.log("You refused to apologize")
+                    alert(
+                        "You passionately refuse to apologize for corrupting the minds of young athenians. You tell the jury that the old ways are dying and that soon, your followers will rise up, refuse the old Gods and find new ones to guide them on their journeys. Guards seize you immediately and force you drink Hemlock. Your body writhes in agony as you go limp. Your words inspire a rebellion that tears the already weakened Athens apart. The city is then lost to history."
+                    )
+                    document.write(
+                        "<h1>Athens is lost.</h1><p>Refresh the page to play again.</p>")
+
+                }
+
+            } else {
+
+                console.log("You pleaded not guilty")
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
