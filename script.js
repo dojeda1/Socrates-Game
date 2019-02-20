@@ -42,6 +42,11 @@ function playGame() {
         document.getElementById("button4").removeEventListener("click", disagreeWithCharges);
 
 
+        document.getElementById("button3").addEventListener("click", saySorry);
+
+        document.getElementById("button4").addEventListener("click", noSaySorry);
+
+
         document.getElementById("subtitle").innerHTML = "You agreed to the charges";
         document.getElementById("mainText").innerHTML = "The jury now asks that you apologize for denying the Gods and tainting the young minds of the city. What do you do?";
 
@@ -49,6 +54,63 @@ function playGame() {
         document.getElementById("button2").innerHTML = "";
         document.getElementById("button3").innerHTML = '<span class="btn btn-primary">Apologize</span>';
         document.getElementById("button4").innerHTML = '<span class="btn btn-primary">Refuse</span>';
+
+        function saySorry() {
+
+            document.getElementById("button3").removeEventListener("click", saySorry);
+
+            document.getElementById("button4").removeEventListener("click", noSaySorry);
+
+
+            document.getElementById("button4").addEventListener("click", agreeStop());
+
+            document.getElementById("button4").addEventListener("click", refuseStop());
+
+            document.getElementById("subtitle").innerHTML = "You apologized to the jury";
+            document.getElementById("mainText").innerHTML = "You plead with the jury to forgive you of your crimes. After deliberation, the jury accepts. However, they then demand that you agree to never share your teachings and ideas to anyone else. If you consent to do so, your punishment will be much less severe. Do you agree to stop spreading your Philosophical ideas?";
+
+            document.getElementById("button1").innerHTML = "";
+            document.getElementById("button2").innerHTML = "";
+            document.getElementById("button3").innerHTML = '<span class="btn btn-primary">Agree</span>';
+            document.getElementById("button4").innerHTML = '<span class="btn btn-primary">Refuse</span>';
+
+
+        }
+
+        function noSaySorry() {
+
+            document.getElementById("button3").removeEventListener("click", saySorry);
+
+            document.getElementById("button4").removeEventListener("click", noSaySorry);
+
+
+            document.getElementById("button4").addEventListener("click", endGame);
+
+            document.getElementById("subtitle").innerHTML = "You refused to apologize";
+            document.getElementById("mainText").innerHTML = "You passionately refuse to apologize for corrupting the minds of young Athenians. You tell the jury that the old ways are dying and that soon, your followers will rise up, refuse the old Gods and find new ones to guide them on their journeys. Guards seize you immediately and force you drink Hemlock. Your body writhes in agony as you go limp. Your words inspire a rebellion that tears the already weakened Athens apart. The city is then lost to history.";
+
+            document.getElementById("button1").innerHTML = "";
+            document.getElementById("button2").innerHTML = "";
+            document.getElementById("button3").innerHTML = "";
+            document.getElementById("button4").innerHTML = '<span class="btn btn-light text-dark">End</span>';
+
+            function endGame() {
+
+                document.getElementById("button4").removeEventListener("click", endGame);
+
+
+                document.getElementById("button4").addEventListener("click", reset);
+
+                document.getElementById("subtitle").innerHTML = "Timeline";
+                document.getElementById("mainText").innerHTML = '<h3>Athens is lost.</h3><ul><li>You agreed to the charges</li><li>You refused to apologize</li></ul><h3 class="text-danger text-center">Bad <span class="font-italic">Alternate</span> Ending</h3>';
+
+                document.getElementById("button1").innerHTML = "";
+                document.getElementById("button2").innerHTML = "";
+                document.getElementById("button3").innerHTML = "";
+                document.getElementById("button4").innerHTML = '<span class="btn btn-dark text-light">Replay</span>';
+
+            }
+        }
     }
 
     function disagreeWithCharges() {
@@ -137,7 +199,7 @@ function playGame() {
                         document.getElementById("button4").addEventListener("click", reset);
 
                         document.getElementById("subtitle").innerHTML = "Timeline";
-                        document.getElementById("mainText").innerHTML = '<h3>You are remembered fondly.</h3><p>Choices</p><ul><li>You disagreed with the charges</li><li>You agreed to death by Hemlock</li><li>You willingly drank the Hemlock</li></ul><h3 class="text-warning text-center">Okay <span class="font-italic">Alternate</span> Ending</h3>';
+                        document.getElementById("mainText").innerHTML = '<h3>You are remembered fondly.</h3><ul><li>You disagreed with the charges</li><li>You agreed to death by Hemlock</li><li>You willingly drank the Hemlock</li></ul><h3 class="text-warning text-center">Okay <span class="font-italic">Alternate</span> Ending</h3>';
 
                         document.getElementById("button1").innerHTML = "";
                         document.getElementById("button2").innerHTML = "";
@@ -145,8 +207,6 @@ function playGame() {
                         document.getElementById("button4").innerHTML = '<span class="btn btn-dark text-light">Replay</span>';
 
                     }
-
-
 
                 }
 
@@ -175,7 +235,7 @@ function playGame() {
                         document.getElementById("button4").addEventListener("click", reset);
 
                         document.getElementById("subtitle").innerHTML = "Timeline";
-                        document.getElementById("mainText").innerHTML = '<h3>You are remembered as a coward.</h3><p>Choices</p><ul><li>You disagreed with the charges</li><li>You agreed to death by Hemlock</li><li>You did not drink the Hemlock</li></ul><h3 class="text-danger text-center">Bad <span class="font-italic">Alternate</span> Ending</h3>';
+                        document.getElementById("mainText").innerHTML = '<h3>You are remembered as a coward.</h3><ul><li>You disagreed with the charges</li><li>You agreed to death by Hemlock</li><li>You did not drink the Hemlock</li></ul><h3 class="text-danger text-center">Bad <span class="font-italic">Alternate</span> Ending</h3>';
 
                         document.getElementById("button1").innerHTML = "";
                         document.getElementById("button2").innerHTML = "";
@@ -198,18 +258,87 @@ function playGame() {
                 document.getElementById("button4").removeEventListener("click", chooseOther);
 
 
-                document.getElementById("button3").addEventListener("click", chooseCompensation);
+                document.getElementById("button3").addEventListener("click", stopTeaching);
 
-                document.getElementById("button4").addEventListener("click", chooseOther);
+                document.getElementById("button4").addEventListener("click", refuseStopTeaching);
 
                 document.getElementById("subtitle").innerHTML = "You recommended exile";
-                document.getElementById("mainText").innerHTML = "You suggest to the jurors that instead of death, that you be exiled from Athens forever. They take some time to think it over and come to a decision. Rather than death, you are to be banished from the city but only on the condition that you never corrupt young minds again. Do you agree to stop teaching philosophy?";
+                document.getElementById("mainText").innerHTML = "You suggest to the jurors that instead of death, you ought to be exiled from Athens. They take some time to think it over and come to a decision. Rather than death, you are to be banished from the city forever, but only on the condition that you never corrupt young minds again. Do you agree to stop teaching philosophy?";
 
                 document.getElementById("button1").innerHTML = "";
                 document.getElementById("button2").innerHTML = "";
                 document.getElementById("button3").innerHTML = '<span class="btn btn-primary">Yes</span>';
                 document.getElementById("button4").innerHTML = '<span class="btn btn-primary">Never!</span>';
 
+                function stopTeaching() {
+
+                    document.getElementById("button3").removeEventListener("click", stopTeaching);
+
+                    document.getElementById("button4").removeEventListener("click", refuseStopTeaching);
+
+
+                    document.getElementById("button4").addEventListener("click", endGame);
+
+                    document.getElementById("subtitle").innerHTML = "You stopped teaching Philosophy";
+                    document.getElementById("mainText").innerHTML = "You look on at the jurors and weakly renounce your pursuits of Philosophical teachings and study. Friends and followers drop their heads in defeat. The lessons you have taught are lost and forgotten. You live the rest of your days out in lonely solitude, never again searching for Truth.";
+
+                    document.getElementById("button1").innerHTML = "";
+                    document.getElementById("button2").innerHTML = "";
+                    document.getElementById("button3").innerHTML = "";
+                    document.getElementById("button4").innerHTML = '<span class="btn btn-light text-dark">End</span>';
+
+                    function endGame() {
+
+                        document.getElementById("button4").removeEventListener("click", endGame);
+
+
+                        document.getElementById("button4").addEventListener("click", reset);
+
+                        document.getElementById("subtitle").innerHTML = "Timeline";
+                        document.getElementById("mainText").innerHTML = '<h3>You are forgotten.</h3><ul><li>You disagreed with the charges</li><li>You recommended exile</li><li>You stopped teaching Philosophy</li></ul><h3 class="text-danger text-center">Bad <span class="font-italic">Alternate</span> Ending</h3>';
+
+                        document.getElementById("button1").innerHTML = "";
+                        document.getElementById("button2").innerHTML = "";
+                        document.getElementById("button3").innerHTML = "";
+                        document.getElementById("button4").innerHTML = '<span class="btn btn-dark text-light">Replay</span>';
+
+                    }
+                }
+
+                function refuseStopTeaching() {
+
+                    document.getElementById("button3").removeEventListener("click", stopTeaching);
+
+                    document.getElementById("button4").removeEventListener("click", refuseStopTeaching);
+
+
+                    document.getElementById("button4").addEventListener("click", endGame);
+
+                    document.getElementById("subtitle").innerHTML = "You refused to stop teaching";
+                    document.getElementById("mainText").innerHTML = "You raise your head up high and stare down your accusers. You tell them that there is nothing more noble than the pursuit of knowledge. To continue life without it is no life worth living. You are ready for to leave this earthly plane and move one to an existence of the mind. The jury, outraged, give you the Hemlock drink demanding that you partake of it now. You raise the glass to your friends and finish it off. Your body falls to the floor, but your words will forever live on.";
+
+                    document.getElementById("button1").innerHTML = "";
+                    document.getElementById("button2").innerHTML = "";
+                    document.getElementById("button3").innerHTML = "";
+                    document.getElementById("button4").innerHTML = '<span class="btn btn-light text-dark">End</span>';
+
+                    function endGame() {
+
+                        document.getElementById("button4").removeEventListener("click", endGame);
+
+
+                        document.getElementById("button4").addEventListener("click", reset);
+
+                        document.getElementById("subtitle").innerHTML = "Timeline";
+                        document.getElementById("mainText").innerHTML = '<h3>You and your teachings are remembered.</h3><ul><li>You disagreed with the charges</li><li>You recommended exile</li><li>You refused to stop teaching</li></ul><h3 class="text-success text-center">Good <span class="font-italic">Alternate</span> Ending</h3>';
+
+                        document.getElementById("button1").innerHTML = "";
+                        document.getElementById("button2").innerHTML = "";
+                        document.getElementById("button3").innerHTML = "";
+                        document.getElementById("button4").innerHTML = '<span class="btn btn-dark text-light">Replay</span>';
+
+                    }
+                }
             }
 
             function chooseCompensation() {
