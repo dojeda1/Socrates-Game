@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Caesar+Dressing|Cinzel|IM+Fell+French+Canon');
+
+
+body {
+    background-image: url("extra_clean_paper.png");
+
+}
+
+.font1 {
+    font-family: 'Caesar Dressing',
+        cursive;
+}
+
+.font2 {
+    font-family: 'Cinzel',
+        serif;
+}
+
+.font3 {
+    font-family: 'IM Fell French Canon',
+        serif;
+}
