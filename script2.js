@@ -142,54 +142,56 @@ $("document").ready(function () {
                         badEnd();
                         resultPage();
 
-                    })
+                    });
+
 
                 });
-            })
-            // end of branch
-        });
+                // end of branch
+            });
 
-        $(".disagreeButton").on("click", function () {
+            $(".disagreeButton").on("click", function () {
 
-            yourChoices.push("You disagreed with the charges");
+                yourChoices.push("You disagreed with the charges");
 
-            subtitleChoice();
-            $("#mainText").html("You look into the eyes of the jurors and begin to explain why you disagree with the charges you have been accused of. You claim that if the jury and regular Athenians are, as they claim, 'improvers of youth', then one man cannot undo all the improvement of so many. You also claim that you must believe in Gods since you believe in the influence of Gods. To do so would be like believing in flute music, but not a flute player.");
-            $("#button3").html("");
-            $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
+                subtitleChoice();
+                $("#mainText").html("You look into the eyes of the jurors and begin to explain why you disagree with the charges you have been accused of. You claim that if the jury and regular Athenians are, as they claim, 'improvers of youth', then one man cannot undo all the improvement of so many. You also claim that you must believe in Gods since you believe in the influence of Gods. To do so would be like believing in flute music, but not a flute player.");
+                $("#button3").html("");
+                $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
 
-            $(".nextButton").on("click", function () {
+                $(".nextButton").on("click", function () {
 
-                $("#mainText").html("The jury hears your defense and proceed to deliberate your fate. After their votes are cast and tallied, the results are as follow: 4 abstentions, 263 votes against you, and 234 in your favor. You are found guilty of all charges and sentenced to death by Hemlock. However, they do allow you a chance to suggest another punishment. What punishment do you offer?")
-                $("#button1").html('<span class="btn btn-primary deathButton">Death</span>');
-                $("#button2").html('<span class="btn btn-primary exileButton">Exile</span>');
-                $("#button3").html('<span class="btn btn-primary rewardButton">Reward</span>');
-                $("#button4").html('<span class="btn btn-primary otherButton">Other</span>');
+                    $("#mainText").html("The jury hears your defense and proceed to deliberate your fate. After their votes are cast and tallied, the results are as follow: 4 abstentions, 263 votes against you, and 234 in your favor. You are found guilty of all charges and sentenced to death by Hemlock. However, they do allow you a chance to suggest another punishment. What punishment do you offer?")
+                    $("#button1").html('<span class="btn btn-primary deathButton">Death</span>');
+                    $("#button2").html('<span class="btn btn-primary exileButton">Exile</span>');
+                    $("#button3").html('<span class="btn btn-primary rewardButton">Reward</span>');
+                    $("#button4").html('<span class="btn btn-primary otherButton">Other</span>');
 
-                $(".deathButton").on("click", function () {
-                    yourChoices.push("You agreed to death by Hemlock")
-
-                    subtitleChoice();
-                    $("#mainText").html("You raise your head up high and announce that do not wish to offer another punishment and accept the jury's decision. In fact you insist that the Hemlock be brought out now. You explain that the law has passed its judgement and ensure them that there is no need to prolong your fate. You are handed the drink and catch a whiff of its lethal aroma. Do you continue to drink the Hemlock?")
-                    $("#button1").html("");
-                    $("#button2").html("");
-                    $("#button3").html('<span class="btn btn-primary drinkButton">Drink</span>');
-                    $("#button4").html('<span class="btn btn-primary noDrinkButton">Refuse</span>');
-
-                    $(".drinkButton").on("click", function () {
-                        yourChoices.push("You willingly drank Hemlock")
+                    $(".deathButton").on("click", function () {
+                        yourChoices.push("You agreed to death by Hemlock")
 
                         subtitleChoice();
-                        $("#mainText").html("As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your friends look on in horror. Although those close to you did not get a chance to understand your insistence on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history.")
-                        $("#button3").html("");
-                        $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                        $("#mainText").html("You raise your head up high and announce that do not wish to offer another punishment and accept the jury's decision. In fact you insist that the Hemlock be brought out now. You explain that the law has passed its judgement and ensure them that there is no need to prolong your fate. You are handed the drink and catch a whiff of its lethal aroma. Do you continue to drink the Hemlock?")
+                        $("#button1").html("");
+                        $("#button2").html("");
+                        $("#button3").html('<span class="btn btn-primary drinkButton">Drink</span>');
+                        $("#button4").html('<span class="btn btn-primary noDrinkButton">Refuse</span>');
 
-                        $(".resultsButton").on("click", function () {
+                        $(".drinkButton").on("click", function () {
+                            yourChoices.push("You willingly drank Hemlock")
 
-                            $("#mainText").html("<h3>You are remembered fondly.</h3><ul>")
-                            resultsList();
-                            okayEnd();
-                            resultPage();
+                            subtitleChoice();
+                            $("#mainText").html("As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your friends look on in horror. Although those close to you did not get a chance to understand your insistence on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history.")
+                            $("#button3").html("");
+                            $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+
+                            $(".resultsButton").on("click", function () {
+
+                                $("#mainText").html("<h3>You are remembered fondly.</h3><ul>")
+                                resultsList();
+                                okayEnd();
+                                resultPage();
+
+                            });
 
                         });
                         // end of branch
@@ -213,27 +215,26 @@ $("document").ready(function () {
 
                         });
                         // end of branch
+
                     });
 
-                });
+                    $(".exileButton").on("click", function () {
 
-                $(".exileButton").on("click", function () {
+                    });
 
-                });
+                    $(".rewardButton").on("click", function () {
 
-                $(".rewardButton").on("click", function () {
+                    });
 
-                });
+                    $(".otherButton").on("click", function () {
 
-                $(".otherButton").on("click", function () {
+                    });
 
                 });
 
             });
 
         });
-
-    });
-};
+    };
 });
 // end
