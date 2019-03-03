@@ -24,6 +24,9 @@ $("document").ready(function () {
 
         $("#subtitle").html("The Start");
         $("#mainText").html("Follow the trial of Socrates by making decisions and unfolding the story as you go. Try to discover the historical ending, or follow an alternate timeline.")
+        $("#button1").html("");
+        $("#button2").html("");
+        $("#button3").html("");
         $("#button4").html('<span class="btn btn-primary playButton">Play</span>')
 
         playGame();
@@ -66,6 +69,12 @@ $("document").ready(function () {
 
     reset();
 
+    $("#restartButton").on("click", function () {
+        console.log("Game restarted");
+        console.log("--------------");
+        reset();
+    });
+
 
 
     function playGame() {
@@ -82,9 +91,9 @@ $("document").ready(function () {
                 yourChoices.push("You agreed with the charges");
 
                 subtitleChoice();
-                $("#mainText").html("The jury now asks that you apologize for denying the Gods and tainting the young minds of the city. What do you do?");
-                $("#button3").html('<span class="btn btn-primary apologizeButton">Apologize</span>');
-                $("#button4").html('<span class="btn btn-primary noApologizeButton">Refuse</span>');
+                $("#mainText").html("The jury now asks that you apologize for denying the Gods and tainting the young minds of the city. Will you apologize to the jury?");
+                $("#button3").html('<span class="btn btn-primary apologizeButton">Yes</span>');
+                $("#button4").html('<span class="btn btn-primary noApologizeButton">No</span>');
 
                 $(".apologizeButton").on("click", function () {
 
