@@ -160,7 +160,7 @@ $("document").ready(function () {
                 yourChoices.push("You disagreed with the charges");
 
                 subtitleChoice();
-                $("#mainText").html("You look into the eyes of the jurors and begin to explain why you disagree with the charges you have been accused of. You claim that if the jury and regular Athenians are, as they claim, 'improvers of youth', then one man cannot undo all the improvement of so many. You also claim that you must believe in Gods since you believe in the influence of Gods. To do so would be like believing in flute music, but not a flute player.");
+                $("#mainText").html("You look into the eyes of the jurors and begin to explain why you disagree with the charges you have been accused of. You claim that if the jury and regular Athenians are, as they claim, <em>improvers of youth</em>, then one man cannot undo all the improvement of so many. You also claim that you must believe in Gods since you believe in the influence of Gods. To do so would be like believing in flute music, but not a flute player.");
                 $("#button3").html("");
                 $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
 
@@ -308,7 +308,7 @@ $("document").ready(function () {
                                     yourChoices.push("You spoke with the patrol")
 
                                     subtitleChoice();
-                                    $("#mainText").html("As the guards begin to get closer you raise up your hands and begin to talk. You tell them of your ideas about knowledge and pride; that if one seeks out truth and realizes that they know nothing, then they are wise. It is those that claim to know everything that truly have no wisdom at all. You convince them to seek truth for themselves and to let a fellow Philosopher go, so that he may continue on his quest for knowledge. The patrol is swayed by your argument and step aside to let you pass by. You are never again seen in Athens, but your message spreads far and wide.")
+                                    $("#mainText").html('As the guards begin to get closer you raise up your hands and begin to talk. You tell them of your ideas about knowledge and pride, saying "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us." You claim that it is those that claim to know everything that truly have no wisdom at all. You convince them to seek truth for themselves and to let a fellow Philosopher go, so that he may continue on his quest for knowledge. The patrol is swayed by your argument and step aside to let you pass by. You are never again seen in Athens, but your message spreads far and wide.')
                                     toResultsButton();
 
                                     $(".resultsButton").on("click", function () {
@@ -449,11 +449,35 @@ $("document").ready(function () {
 
                         $(".confirmButton").on("click", function () {
 
-                            yourSuggestion = $("#inputSuggestion").val();
+                            // styles response fo fit story format
+                            var rawSuggestion = $("#inputSuggestion").val();
+
+                            if (rawSuggestion != "") {
+
+                                const capitalize = (s) => {
+                                    if (typeof s !== 'string') return ''
+                                    return s.charAt(0).toUpperCase() + s.slice(1)
+                                }
+
+                                var uppercaseSuggestion = capitalize(rawSuggestion)
+
+                                if (uppercaseSuggestion.charAt(uppercaseSuggestion.length - 1) == "." || uppercaseSuggestion.charAt(uppercaseSuggestion.length - 1) == "!" || uppercaseSuggestion.charAt(uppercaseSuggestion.length - 1) == "?") {
+                                    yourSuggestion = uppercaseSuggestion;
+                                } else {
+                                    yourSuggestion = uppercaseSuggestion + ".";
+                                }
+
+                            } else {
+
+                                yourSuggestion = "All your base are belong to us."
+
+                            }
+
+
                             console.log(yourSuggestion);
 
-                            $("#mainText").html('You turn to the jury, take a deep breath and tell them, "' + yourSuggestion +
-                                '" You are not quite sure if it is what you said or the way you said it, but your accusers jump to their feet and demand your immediate death. A fight is imminent. You can go straight for the jurors and ignore the guards, or you can attack the guards first. Who do you fight first?')
+                            $("#mainText").html('You turn to the jury, take a deep breath and tell them, <strong>"' + yourSuggestion +
+                                '"</strong> You are not quite sure if it is what you said or the way you said it, but your accusers jump to their feet and demand your immediate death. A fight is imminent. You can go straight for the jurors and ignore the guards, or you can attack the guards first. Who do you fight first?')
                             $("#button1").html("");
                             $("#button2").html("");
                             $("#button3").html('<span class="btn btn-primary juryButton">Jury</span>');
@@ -523,7 +547,7 @@ $("document").ready(function () {
 
                                         $(".resultsButton").on("click", function () {
 
-                                            $("#mainText").html("<h3>You are remembered as great Philosopher and warrior.</h3><ul>")
+                                            $("#mainText").html("<h3>You are remembered as a great Philosopher and warrior.</h3><ul>")
                                             resultsList();
                                             goodEnd();
                                             resultPage();
