@@ -2,6 +2,8 @@ $("document").ready(function () {
 
     var yourChoices = [];
 
+    var yourSuggestion = "";
+
     function subtitleChoice() {
         $("#subtitle").html(yourChoices[yourChoices.length - 1]);
         console.log(yourChoices[yourChoices.length - 1]);
@@ -402,8 +404,8 @@ $("document").ready(function () {
                                             resultPage();
 
                                         });
-
                                     });
+                                    // end of branch
 
                                     $(".noDrinkButton").on("click", function () {
 
@@ -421,20 +423,44 @@ $("document").ready(function () {
                                             resultPage();
 
                                         });
-
                                     });
+                                    // end of branch
 
                                 });
 
                             });
 
-
                         });
-
 
                     });
 
                     $(".otherButton").on("click", function () {
+
+                        yourChoices.push("You made a new suggestion")
+
+                        subtitleChoice();
+                        $("#mainText").html("You take a moment to ponder what punishment to recommend to the jury. Suddenly, a brilliant new suggestion comes to your mind. What do you wish to tell the jury?")
+                        $("#mainText").append('<input type="text" class="form-control my-2" id="inputSuggestion" placeholder="type here">');
+
+                        $("#button1").html("");
+                        $("#button2").html("");
+                        $("#button3").html("");
+                        $("#button4").html('<span class="btn btn-primary confirmButton">confirm</span>');
+
+                        $(".confirmButton").on("click", function () {
+
+                            yourSuggestion = $("#inputSuggestion").val();
+                            console.log(yourSuggestion);
+
+                            $("#mainText").html('You turn to the jury, take a deep breath and tell them, "' + yourSuggestion +
+                                '" You are not quite sure if it is what you said or the way you said it, but your accusers jump to their feet and demand your immediate death. A fight is imminent. You can go straight for the jurors and ignore the guards, or you can attack the guards first. Who do you fight first?')
+                            $("#button1").html("");
+                            $("#button2").html("");
+                            $("#button3").html('<span class="btn btn-primary juryButton">Jury</span>');
+                            $("#button4").html('<span class="btn btn-primary noJuryButton">Guards</span>');
+
+
+                        })
 
                     });
 
