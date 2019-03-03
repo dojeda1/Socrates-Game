@@ -170,6 +170,7 @@ $("document").ready(function () {
                     $("#button4").html('<span class="btn btn-primary otherButton">Other</span>');
 
                     $(".deathButton").on("click", function () {
+
                         yourChoices.push("You agreed to death by Hemlock")
 
                         subtitleChoice();
@@ -180,6 +181,7 @@ $("document").ready(function () {
                         $("#button4").html('<span class="btn btn-primary noDrinkButton">Refuse</span>');
 
                         $(".drinkButton").on("click", function () {
+
                             yourChoices.push("You willingly drank Hemlock")
 
                             subtitleChoice();
@@ -200,6 +202,7 @@ $("document").ready(function () {
 
 
                         $(".noDrinkButton").on("click", function () {
+
                             yourChoices.push("You didn't drink the Hemlock")
 
                             subtitleChoice();
@@ -220,6 +223,7 @@ $("document").ready(function () {
                     });
 
                     $(".exileButton").on("click", function () {
+
                         yourChoices.push("You recommended exile")
 
                         subtitleChoice();
@@ -230,6 +234,7 @@ $("document").ready(function () {
                         $("#button4").html('<span class="btn btn-primary noStopTeachButton">Never!</span>');
 
                         $(".stopTeachButton").on("click", function () {
+
                             yourChoices.push("You stopped teaching Philosophy")
 
                             subtitleChoice();
@@ -238,7 +243,7 @@ $("document").ready(function () {
 
                             $(".resultsButton").on("click", function () {
 
-                                $("#mainText").html("<h3>You are remembered fondly.</h3><ul>")
+                                $("#mainText").html("<h3>You are forgotten.</h3><ul>")
                                 resultsList();
                                 badEnd();
                                 resultPage();
@@ -248,6 +253,7 @@ $("document").ready(function () {
                         // end of branch
 
                         $(".noStopTeachButton").on("click", function () {
+
                             yourChoices.push("You refused to stop teaching")
 
                             subtitleChoice();
@@ -268,6 +274,109 @@ $("document").ready(function () {
                     });
 
                     $(".rewardButton").on("click", function () {
+
+                        yourChoices.push("You recommended you be compensated")
+
+                        subtitleChoice();
+                        $("#mainText").html("You tell the jury that you teach Philosophy to better the minds of the people. You have lived life as a pauper, never asking for compensation for sharing lessons or ideas with others. It is then that you recommend the most fitting penalty for your action should be reimbursement. You suggest that you be given food and wages for the broadening of Philosophical thought. The jury becomes enraged at your proposal and demands you suggest a proper penalty. It is then that you reluctantly suggest a small fee, something that a poor man such as yourself can afford to pay.")
+                        $("#button1").html("");
+                        $("#button2").html("");
+                        $("#button3").html("");
+                        $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
+
+                        $(".nextButton").on("click", function () {
+
+                            $("#mainText").html("The jurors then take your suggestion into account and begin to cast their votes. After they are tallied, it is decided that the proposed fee is insufficient. It is to be death by Hemlock. You are then taken away to await your fate. As you are held captive, your friends suggests that you offer a bribe to the guards so you can escape. Do you offer a bribe?")
+                            $("#button3").html('<span class="btn btn-primary bribeButton">Bribe</span>');
+                            $("#button4").html('<span class="btn btn-primary noBribeTeachButton">No</span>');
+
+                            $(".bribeButton").on("click", function () {
+
+                                yourChoices.push("You bribed the guard")
+
+                                subtitleChoice();
+                                $("#mainText").html("You decide to follow their suggestion and proceed to bribe the guards with money your friends have agreed to give you. The guard on duty decides to accept and attempts to sneak you out in the dead of the night. At the edge of the city, just as you are about to escape, you are spotted by a small patrol unit of three guards. They begin moving towards you with spears in hand, calling out your name. You realize you can either try to use your words, or your fists. Do you try to speak with them?")
+                                $("#button3").html('<span class="btn btn-primary talkButton">Talk</span>');
+                                $("#button4").html('<span class="btn btn-primary noTalkButton">Fight!</span>');
+
+
+                                $(".talkButton").on("click", function () {
+
+                                    yourChoices.push("You spoke with the patrol")
+
+                                    subtitleChoice();
+                                    $("#mainText").html("As the guards begin to get closer you raise up your hands and begin to talk. You tell them of your ideas about knowledge and pride; that if one seeks out truth and realizes that they know nothing, then they are wise. It is those that claim to know everything that truly have no wisdom at all. You convince them to seek truth for themselves and to let a fellow Philosopher go, so that he may continue on his quest for knowledge. The patrol is swayed by your argument and step aside to let you pass by. You are never again seen in Athens, but your message spreads far and wide.")
+                                    toResultsButton();
+
+                                    $(".resultsButton").on("click", function () {
+
+                                        $("#mainText").html("<h3>Your teachings live on, but your story is lost.</h3><ul>")
+                                        resultsList();
+                                        okayEnd();
+                                        resultPage();
+
+                                    });
+                                });
+                                // end of branch
+
+                                $(".noTalkButton").on("click", function () {
+
+                                    yourChoices.push("You fought the patrol")
+
+                                    subtitleChoice();
+                                    $("#mainText").html("As the guards begin to come closer you prepare yourself for a fight. Out of the corner of your eye, you spot the spear the guard who escorted you has in his hand. Do you decide to grab it?")
+                                    $("#button3").html('<span class="btn btn-primary spearButton">Grab</span>');
+                                    $("#button4").html('<span class="btn btn-primary noSpearButton">No</span>');
+
+                                    $(".spearButton").on("click", function () {
+
+                                        yourChoices.push("You grabbed the spear")
+
+                                        subtitleChoice();
+                                        $("#mainText").html("You reach over and yank the spear out of your escorts hands and lunge after the patrol. They rush you and a battle ensues. You use your weapon to pierce the chest of the first guard, bringing him to the ground. Suddenly the guard that led you out of the city grabs you from behind. As you are pinned in hid arms, one patrolman swings his sword and removes your head from your shoulders. The guards make a mockery of your efforts greatly exaggerate your cowardice.")
+                                        toResultsButton();
+
+                                        $(".resultsButton").on("click", function () {
+
+                                            $("#mainText").html("<h3>Your reputation is tarnished and your teachings are forgotten.</h3><ul>")
+                                            resultsList();
+                                            badEnd();
+                                            resultPage();
+
+                                        });
+
+                                    });
+
+                                    $(".noSpearButton").on("click", function () {
+
+                                        yourChoices.push("You didn't grab the spear")
+
+                                        subtitleChoice();
+                                        $("#mainText").html("The escort flees the scene to avoid being recognized. As the guards walk up to you, you act feeble to be perceived as non-threatening. A guard reaches out to grab you but suddenly, you bring your fist to his throat causing him to drop to his knees. You drop down low and kick out your leg, tripping the guard to your right. You quickly grab a dropped shield and defend against an incoming blow from the last patrolman. Finally, with all your might you launch the shield at his face, throwing him back. With all three damaged and down, you run off into the distance, never to be seen again.")
+                                        toResultsButton();
+
+                                        $(".resultsButton").on("click", function () {
+
+                                            $("#mainText").html("<h3>Your teachings are remembered, but your story is lost</h3><ul>")
+                                            resultsList();
+                                            okayEnd();
+                                            resultPage();
+
+                                        });
+
+                                    });
+
+                                });
+
+                            });
+
+                            $(".noBribeButton").on("click", function () {
+
+                            });
+
+
+                        });
+
 
                     });
 
