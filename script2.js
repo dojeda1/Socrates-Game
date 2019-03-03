@@ -56,6 +56,7 @@ $("document").ready(function () {
         $("#subtitle").html("Results");
         $("#button4").html('<span class="btn btn-dark replayButton text-light">Replay</span>')
         console.log("End");
+        console.log("--------------");
         $(".replayButton").on("click", function () {
             reset();
         });
@@ -288,7 +289,7 @@ $("document").ready(function () {
 
                             $("#mainText").html("The jurors then take your suggestion into account and begin to cast their votes. After they are tallied, it is decided that the proposed fee is insufficient. It is to be death by Hemlock. You are then taken away to await your fate. As you are held captive, your friends suggests that you offer a bribe to the guards so you can escape. Do you offer a bribe?")
                             $("#button3").html('<span class="btn btn-primary bribeButton">Bribe</span>');
-                            $("#button4").html('<span class="btn btn-primary noBribeTeachButton">No</span>');
+                            $("#button4").html('<span class="btn btn-primary noBribeButton">No</span>');
 
                             $(".bribeButton").on("click", function () {
 
@@ -344,8 +345,8 @@ $("document").ready(function () {
                                             resultPage();
 
                                         });
-
                                     });
+                                    // end of branch
 
                                     $(".noSpearButton").on("click", function () {
 
@@ -363,14 +364,67 @@ $("document").ready(function () {
                                             resultPage();
 
                                         });
-
                                     });
+                                    // end of branch
 
                                 });
 
                             });
 
                             $(".noBribeButton").on("click", function () {
+
+                                yourChoices.push("You didn't bribe the guard");
+
+                                subtitleChoice();
+                                $("#mainText").html("You talk with your friends and reveal to them the reasons you do not wish to run or escape death. You state that the body is a source of endless turmoil and that the mind can only be liberated after death. You have lived in Athens, agreeing to their laws by continuing to stay. To ignore the laws now is to ignore your previous agreement with it, which is unjust.");
+                                $("#button3").html("");
+                                $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
+
+                                $(".nextButton").on("click", function () {
+
+                                    $("#mainText").html("Your words help to calm your friends, and although they will grieve, at least they know your reasoning. After some time and a bath, it is the hour of your execution. You are handed the goblet of Hemlock. Do you drink it?")
+                                    $("#button3").html('<span class="btn btn-primary drinkButton">Drink</span>');
+                                    $("#button4").html('<span class="btn btn-primary noDrinkButton">Run</span>');
+
+                                    $(".drinkButton").on("click", function () {
+
+                                        yourChoices.push("You drank the Hemlock")
+
+                                        subtitleChoice();
+                                        $("#mainText").html("You take the drink and finish it completely. Your body begins to weaken and you lie down in bed, slowly fading off into the next world. Your friends admire your conviction and praise your ideas. The name Socrates is forever engrained in history as one of the true great Philosophers.")
+                                        toResultsButton();
+
+                                        $(".resultsButton").on("click", function () {
+
+                                            $("#mainText").html("<h3>You and your ideas are forever remembered and revered.</h3><ul>")
+                                            resultsList();
+                                            historicEnd();
+                                            resultPage();
+
+                                        });
+
+                                    });
+
+                                    $(".noDrinkButton").on("click", function () {
+
+                                        yourChoices.push("You tried to run")
+
+                                        subtitleChoice();
+                                        $("#mainText").html("As you begin to bring the glass of poison to your mouth. The fear of eternal death grips your heart. You refuse to follow through and try to escape in panic. Guards seize you and the jury declares you are taken out and beaten in the streets. Your death is gruesome and shameful. Your actions and words seems contradictory to everyone and your teachings are forgotten.")
+                                        toResultsButton();
+
+                                        $(".resultsButton").on("click", function () {
+
+                                            $("#mainText").html("<h3>You are shamed and your teachings are forgotten.</h3><ul>")
+                                            resultsList();
+                                            badEnd();
+                                            resultPage();
+
+                                        });
+
+                                    });
+
+                                });
 
                             });
 
