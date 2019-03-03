@@ -28,6 +28,14 @@ $("document").ready(function () {
     }
 
     // End tag functions
+
+    function toResultsButton() {
+        $("#button1").html("");
+        $("#button2").html("");
+        $("#button3").html("");
+        $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+    }
+
     function historicEnd() {
         $("#mainText").append('<h3 class="text-success text-center pt-2">Good <span class="font-italic ">Historic</span> Ending</h3>');
     };
@@ -90,8 +98,7 @@ $("document").ready(function () {
 
                         subtitleChoice();
                         $("#mainText").html("The jury accepts your promise to never again share your brilliant mind with others. You are charged with a small fee which your friends agree to pay for you. You continue living in Athens, not as a great Philosopher of your time, but as a common old man. Your actions have proved inconsequential and your teaching are lost to time.")
-                        $("#button3").html("");
-                        $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                        toResultsButton();
 
                         $(".resultsButton").on("click", function () {
 
@@ -101,7 +108,6 @@ $("document").ready(function () {
                             resultPage();
 
                         });
-
                     });
                     // end of branch
 
@@ -111,8 +117,7 @@ $("document").ready(function () {
 
                         subtitleChoice();
                         $("#mainText").html("You refuse to stop your teachings. You try to convince the jury why Athens and the world need people to question everything in order to learn an grow. However, the jury does not look kindly on your words and you are sentenced to life in prison. Your friends remember you fondly, but the main tenets of your teachings are weakened after your apology.")
-                        $("#button3").html("");
-                        $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                        toResultsButton();
 
                         $(".resultsButton").on("click", function () {
 
@@ -128,12 +133,12 @@ $("document").ready(function () {
                 });
 
                 $(".noApologizeButton").on("click", function () {
+
                     yourChoices.push("You refused to apologize")
 
                     subtitleChoice();
                     $("#mainText").html("You passionately refuse to apologize for corrupting the minds of young Athenians. You tell the jury that the old ways are dying and that soon, your followers will rise up, refuse the old Gods and find new ones to guide them on their journeys. Guards seize you immediately and force you drink Hemlock. Your body writhes in agony as you go limp. Your words inspire a rebellion that tears the already weakened Athens apart. The city is then lost to history.")
-                    $("#button3").html("");
-                    $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                    toResultsButton();
 
                     $(".resultsButton").on("click", function () {
 
@@ -143,8 +148,6 @@ $("document").ready(function () {
                         resultPage();
 
                     });
-
-
                 });
                 // end of branch
             });
@@ -181,8 +184,7 @@ $("document").ready(function () {
 
                             subtitleChoice();
                             $("#mainText").html("As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your friends look on in horror. Although those close to you did not get a chance to understand your insistence on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history.")
-                            $("#button3").html("");
-                            $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                            toResultsButton();
 
                             $(".resultsButton").on("click", function () {
 
@@ -192,33 +194,76 @@ $("document").ready(function () {
                                 resultPage();
 
                             });
-
                         });
                         // end of branch
 
-                    });
 
-                    $(".noDrinkButton").on("click", function () {
-                        yourChoices.push("You didn't drink the Hemlock")
 
-                        subtitleChoice();
-                        $("#mainText").html("You stare at the full goblet in your hands, and a wave of fear rushes into your body. Your hands loosen their grip and the drink slips through, falling to the ground. You make a mad sprint towards a clearing in the crowd around you. Just as you are about to get through, a spear pierces you from behind and pins you to the ground. Everyone looks at you with hatred and disgust. Your followers lose all respect for you and your ideas and your teachings are mocked throughout all of Athens.")
-                        $("#button3").html("");
-                        $("#button4").html('<span class="btn btn-light resultsButton text-dark">Results</span>');
+                        $(".noDrinkButton").on("click", function () {
+                            yourChoices.push("You didn't drink the Hemlock")
 
-                        $(".resultsButton").on("click", function () {
+                            subtitleChoice();
+                            $("#mainText").html("You stare at the full goblet in your hands, and a wave of fear rushes into your body. Your hands loosen their grip and the drink slips through, falling to the ground. You make a mad sprint towards a clearing in the crowd around you. Just as you are about to get through, a spear pierces you from behind and pins you to the ground. Everyone looks at you with hatred and disgust. Your followers lose all respect for you and your ideas and your teachings are mocked throughout all of Athens.")
+                            toResultsButton();
 
-                            $("#mainText").html("<h3>You are remembered as a coward.</h3><ul>")
-                            resultsList();
-                            okayEnd();
-                            resultPage();
+                            $(".resultsButton").on("click", function () {
 
+                                $("#mainText").html("<h3>You are remembered as a coward.</h3><ul>")
+                                resultsList();
+                                okayEnd();
+                                resultPage();
+
+                            });
                         });
                         // end of branch
 
                     });
 
                     $(".exileButton").on("click", function () {
+                        yourChoices.push("You recommended exile")
+
+                        subtitleChoice();
+                        $("#mainText").html("You suggest to the jurors that instead of death, you ought to be exiled from Athens. They take some time to think it over and come to a decision. Rather than death, you are to be banished from the city forever, but only on the condition that you never corrupt young minds again. Do you agree to stop teaching philosophy?")
+                        $("#button1").html("");
+                        $("#button2").html("");
+                        $("#button3").html('<span class="btn btn-primary stopTeachButton">Yes</span>');
+                        $("#button4").html('<span class="btn btn-primary noStopTeachButton">Never!</span>');
+
+                        $(".stopTeachButton").on("click", function () {
+                            yourChoices.push("You stopped teaching Philosophy")
+
+                            subtitleChoice();
+                            $("#mainText").html("You look on at the jurors and weakly renounce your pursuits of Philosophical teachings and study. Friends and followers drop their heads in defeat. The lessons you have taught are lost and forgotten. You live the rest of your days out in lonely solitude, never again searching for Truth.")
+                            toResultsButton();
+
+                            $(".resultsButton").on("click", function () {
+
+                                $("#mainText").html("<h3>You are remembered fondly.</h3><ul>")
+                                resultsList();
+                                badEnd();
+                                resultPage();
+
+                            });
+                        });
+                        // end of branch
+
+                        $(".noStopTeachButton").on("click", function () {
+                            yourChoices.push("You refused to stop teaching")
+
+                            subtitleChoice();
+                            $("#mainText").html("You raise your head up high and stare down your accusers. You tell them that there is nothing more noble than the pursuit of knowledge. To continue life without it is no life worth living. You are ready for to leave this earthly plane and move one to an existence of the mind. The jury, outraged, give you the Hemlock drink demanding that you partake of it now. You raise the glass to your friends and finish it off. Your body falls to the floor, but your words will forever live on.")
+                            toResultsButton();
+
+                            $(".resultsButton").on("click", function () {
+
+                                $("#mainText").html("<h3>You are remembered fondly.</h3><ul>")
+                                resultsList();
+                                goodEnd();
+                                resultPage();
+
+                            });
+                        });
+                        // end of branch
 
                     });
 
@@ -232,9 +277,13 @@ $("document").ready(function () {
 
                 });
 
+
+
             });
 
         });
+
     };
+
 });
-// end
+// end game
