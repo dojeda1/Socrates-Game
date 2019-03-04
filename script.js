@@ -100,7 +100,7 @@ $("document").ready(function () {
                     yourChoices.push("You apologized to the jury");
 
                     subtitleChoice();
-                    $("#mainText").html("You plead with the jury to forgive you for all you've done. After deliberation, the jury accepts. However, they now demand that you vow to never again share your teachings or ideas to anyone else. If you consent to do so, your punishment will be much less severe. Do you agree to stop spreading your Philosophical ideas?")
+                    $("#mainText").html("You plead with the jury to forgive you for all you've done. After deliberation, the jury accepts. However, they now demand that you vow to never again share your teachings or ideas with anyone else. If you consent to do so, your punishment will be much less severe. Do you agree to stop spreading your Philosophical ideas?")
                     $("#button3").html('<span class="btn btn-primary stopTeachButton">Agree</span>');
                     $("#button4").html('<span class="btn btn-primary noStopTeachButton">Refuse</span>');
 
@@ -109,7 +109,7 @@ $("document").ready(function () {
                         yourChoices.push("You stopped teaching Philosophy")
 
                         subtitleChoice();
-                        $("#mainText").html("You get down on you hands and knees. While your eyes fill with tears, you promise to immediately cease sharing your blasphemous thoughts forever. The jury hears your plea and decide to charge you with a small fee, which your friends agree to pay for you. You quietly live out the rest of your days in Athens, not as a great Philosopher of your time, but as a common old man. Your actions have proved inconsequential and your teaching are lost to time.")
+                        $("#mainText").html("You get down on you hands and knees. While your eyes fill with tears, you promise to immediately cease sharing your blasphemous thoughts forever. The jury hears your plea and decides to charge you with a small fee, which your friends agree to pay for you. You quietly live out the rest of your days in Athens, not as a great Philosopher of your time, but as a common old man. Your actions have proved inconsequential and your teaching are lost to time.")
                         toResultsButton();
 
                         $(".resultsButton").on("click", function () {
@@ -128,7 +128,7 @@ $("document").ready(function () {
                         yourChoices.push("You refused to stop teaching Philosophy");
 
                         subtitleChoice();
-                        $("#mainText").html("You refuse to stop your sharing your brilliant mind with those who wish to learn. You try to persuade the jury that Athens and the world need people to question everything in order to learn and grow. However, your accusers do not look kindly on your words and you are sentenced to life in prison. Your friends remember you fondly, but the main tenets of your teachings are weakened after your public apology.")
+                        $("#mainText").html("You refuse to stop sharing your brilliant mind with those who wish to learn. You try to persuade the jury that Athens and the world need people to question everything in order to learn and grow. However, your accusers do not look kindly on your words and you are sentenced to life in prison. Your friends remember you fondly, but the main tenets of your teachings are weakened after your public apology.")
                         toResultsButton();
 
                         $(".resultsButton").on("click", function () {
@@ -149,7 +149,7 @@ $("document").ready(function () {
                     yourChoices.push("You refused to apologize")
 
                     subtitleChoice();
-                    $("#mainText").html("You passionately refuse to apologize for awakening the minds of young Athenians. You tell the jury that the old ways are dying and that soon, your followers will rise up, refuse the old Gods and find a new one to guide them on their journeys. Guards seize you instantly and force you drink Hemlock. Your body writhes in agony as you go limp. Your words inspire a rebellion that tears the already weakened Athens apart. The city is then lost to history.")
+                    $("#mainText").html("You passionately refuse to apologize for awakening the minds of young Athenians. You tell the jury that the old ways are dying and that soon, your followers will rise up, refuse the old Gods and find a new one to guide them on their journeys. Guards seize you instantly and force you to drink Hemlock. Your body writhes in agony as you flop to the floor. Your words inspire a rebellion that tears the already weakened Athens apart. The city is then lost to history.")
                     toResultsButton();
 
                     $(".resultsButton").on("click", function () {
@@ -169,7 +169,7 @@ $("document").ready(function () {
                 yourChoices.push("You disagreed with the charges");
 
                 subtitleChoice();
-                $("#mainText").html('You look into the eyes of the jurors and begin to reveal the reasons you disagree with all charges. You explain that since you believe in godly affairs, that you must believe in Gods. To do so would be like believing in flute music, but not flute players. You claim that if both the jury and all regular Athenians are, as they claim to be, <em>improvers of youth</em>, then a single man cannot have the power to undo all the work of so many. You also tell them, "I am but a horsefly put by the gods on the flanks of sluggish Athens in an attempt to wake them up." You let the jury know that many men claim to be wise, but one cannot be wise if they do not question what is around them.');
+                $("#mainText").html('You look into the eyes of the jurors and begin to reveal the reasons you disagree with all charges. You explain that since you believe in godly affairs, that you must believe in Gods. To do so would be like believing in flute music, but not flute players. You claim that if both the jury and all regular Athenians are, as they claim to be, <em>improvers of youth</em>, then a single man cannot have the power to undo all the work of so many. You also tell them, "I am but a horsefly put by the gods on the flanks of sluggish Athens in an attempt to wake it up." You let the jury know that many men claim to be wise, but are not if they refuse to question what is around them.');
                 $("#button3").html("");
                 $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
 
@@ -197,7 +197,7 @@ $("document").ready(function () {
                             yourChoices.push("You willingly drank the Hemlock")
 
                             subtitleChoice();
-                            $("#mainText").html("As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your friends look on in horror. Although those close to you did not get a chance to understand your insistence on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history.")
+                            $("#mainText").html("As you press the drink to your lips, you throw back your head and let the poisonous concoction slide down your throat. Your body collapses in the middle of the square as your loved ones look on in horror. Although those close to you did not get a chance to understand your insistence on choosing death, you are still remembered fondly by them. Your teachings continue to be taught throughout history.")
                             toResultsButton();
 
                             $(".resultsButton").on("click", function () {
@@ -269,7 +269,7 @@ $("document").ready(function () {
                             yourChoices.push("You refused to stop teaching")
 
                             subtitleChoice();
-                            $("#mainText").html('You raise your head up high and stare down your accusers. You tell them, "It is the greatest good for a man to discuss virtue every day and to test themselves and others, for the unexamined life is not worth living." You are ready to leave this earthly plane and move on to an existence of the mind. The jury, outraged, forcefully hand you the Hemlock drink demanding that you partake of it now. You raise the glass to your friends and proceed to swallow every drop. Your body drops to the floor, but your words will forever live on.')
+                            $("#mainText").html('You raise your head up high and stare down your accusers. You tell them, "It is the greatest good for a man to discuss virtue every day and to test themselves and others, for the unexamined life is not worth living." You are ready to leave this earthly plane and move on to an existence of the mind. The jury, outraged, forcefully hand you the Hemlock drink demanding that you partake of it now. You raise the glass to your allies and proceed to swallow every drop. Your body drops to the floor, but your words will forever live on.')
                             toResultsButton();
 
                             $(".resultsButton").on("click", function () {
@@ -298,9 +298,9 @@ $("document").ready(function () {
 
                         $(".nextButton").on("click", function () {
 
-                            $("#mainText").html("Your friends, Plato, Crito, and Apollodorus, then recommend a fee of 30 minae instead, even agreeing to pay it themselves. The jurors begrudgingly take these last suggestions into account and begin to cast their votes. After they are counted, it is decided that the proposed fee is insufficient. It is to be death by Hemlock. You are then taken to a nearby prison to await your fate. As you are held captive, Crito tells you he will offer a bribe to the guard so you can escape. Do you offer the guard a bribe?")
+                            $("#mainText").html("Your friends, Plato, Crito, and Apollodorus, then recommend a fee of 30 minae instead, even agreeing to pay it themselves. The jurors begrudgingly take these last suggestions into account and begin to cast their votes. After they are counted, it is decided that the proposed fee is insufficient. It is to be death by Hemlock. You are then taken to a nearby prison to await your fate. As you are held captive, Crito tells you he will offer a bribe to the guard so you can escape. What do you decide to do?")
                             $("#button3").html('<span class="btn btn-primary bribeButton">Bribe</span>');
-                            $("#button4").html('<span class="btn btn-primary noBribeButton">No</span>');
+                            $("#button4").html('<span class="btn btn-primary noBribeButton">Stay</span>');
 
                             $(".bribeButton").on("click", function () {
 
@@ -317,7 +317,7 @@ $("document").ready(function () {
                                     yourChoices.push("You spoke with the patrol")
 
                                     subtitleChoice();
-                                    $("#mainText").html('As the guards begin to get closer you raise up your hands and begin to talk. You tell them of your ideas about knowledge and life, saying, "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us." You convince them to seek truth for themselves and to let a fellow Philosopher go, so that he may continue on his quest for knowledge. The patrol is swayed by your argument and step aside to let you pass by. You are never again seen in Athens and the end of your life is a mystery, but your message spreads far and wide.')
+                                    $("#mainText").html('As the guards begin to get closer you raise up your hands and begin to speak to them. You tell them of your ideas about knowledge and life, saying, "True wisdom comes to each of us when we realize how little we understand about life, ourselves, and the world around us." You convince them to seek truth for themselves and to let a fellow Philosopher go, so that he may continue his quest for knowledge. The patrol is swayed by your argument and step aside to let you pass by. You are never again seen in Athens and the end of your life is a mystery, but your message spreads far and wide.')
                                     toResultsButton();
 
                                     $(".resultsButton").on("click", function () {
@@ -345,7 +345,7 @@ $("document").ready(function () {
                                         yourChoices.push("You grabbed the sword")
 
                                         subtitleChoice();
-                                        $("#mainText").html("You reach over and yank the weapon out of your escort's sheath, charging after the patrol. You use the sword to pierce the chest of the first guard, bringing him to the ground. Suddenly the guard that led you out of the city grabs you from behind, pinning you in his arms. One patrolman swings his blade and removes your head from your shoulders. The guards make a mockery of your efforts and drag your body back to be used as a warning to those who defy Athens.")
+                                        $("#mainText").html("You reach over and yank the weapon out of your escort's sheath, charging after the patrol. You use the sword to pierce the chest of the first guard, bringing him to his knees. Suddenly the guard that led you out of the city grabs you from behind, pinning you in his arms. One patrolman swings his blade and completely severs your head from your body. The guards make a mockery of your efforts and drag your remains back into the city to be used as a warning to those who defy Athens.")
                                         toResultsButton();
 
                                         $(".resultsButton").on("click", function () {
@@ -364,7 +364,7 @@ $("document").ready(function () {
                                         yourChoices.push("You didn't grab the sword")
 
                                         subtitleChoice();
-                                        $("#mainText").html("The escort flees the scene to avoid being recognized. As the guards walk up to you, you act feeble so they perceive you as non-threatening. A guard reaches out to grab you but suddenly, you bring your fist to his throat causing him to fall on his back. You drop down low and kick out your leg, tripping the guard to your right. The last patrolman comes at you with his spear, but you quickly grab a dropped shield and defend against the incoming blow Finally. With all your might you launch the shield at his face, knocking him out. With all three damaged and down, you run off into the distance, never to be seen again.")
+                                        $("#mainText").html("The escort flees the scene to avoid being recognized. As the guards walk up to you, you act feeble so they perceive you as non-threatening. A guard reaches out to grab you but suddenly, you bring your fist to his throat causing him to fall on his back. You drop down low and kick out your leg, tripping the guard to your right. The last patrolman comes at you with his spear, but you quickly grab a dropped shield and defend against the incoming blow. Finally, with all your might you launch the shield at his face, knocking him out. With all three damaged and down, you run off into the distance, never to be seen again.")
                                         toResultsButton();
 
                                         $(".resultsButton").on("click", function () {
@@ -387,13 +387,13 @@ $("document").ready(function () {
                                 yourChoices.push("You didn't bribe the guard");
 
                                 subtitleChoice();
-                                $("#mainText").html("You talk with your friends and reveal to them the reasons you don't wish to run or escape death. You state that the body is a source of endless turmoil. Whether consciousness ends or continues, the mind can only be liberated after death. You have lived in Athens for many years, agreeing to their laws by remaining in the safety of its walls. Ignoring the laws now is the same as breaking your previous agreement with it, which you believe is unjust.");
+                                $("#mainText").html("You talk with your supporters and reveal to them the reasons you don't wish to run or escape death. You state that the body is a source of endless turmoil. Whether consciousness ends or continues, the mind can only be liberated after death. You have lived in Athens for many years, agreeing to its laws by remaining in the safety of its walls. Ignoring the laws now is the same as breaking your previous agreement with it, which you believe is unjust.");
                                 $("#button3").html("");
                                 $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
 
                                 $(".nextButton").on("click", function () {
 
-                                    $("#mainText").html('Your words help to calm your friends, and although they will grieve, at least they know your reasoning. It is now the time of your execution and your friends are there to support you. You tell them, "The hour of departure has arrived, and we go our separate ways, I to die, and you to live. Which of these two is better only God knows." You are handed the goblet of Hemlock. Do you drink it?')
+                                    $("#mainText").html('Your words help to calm your friends, and although they will grieve, at least they know your reasoning. It is now the time of your execution and your companions are there to support you. You tell them, "The hour of departure has arrived, and we go our separate ways, I to die, and you to live. Which of these two is better only God knows." You are handed the goblet of Hemlock. Do you drink it?')
                                     $("#button3").html('<span class="btn btn-primary drinkButton">Drink</span>');
                                     $("#button4").html('<span class="btn btn-primary noDrinkButton">Run</span>');
 
@@ -402,7 +402,7 @@ $("document").ready(function () {
                                         yourChoices.push("You drank the Hemlock")
 
                                         subtitleChoice();
-                                        $("#mainText").html("You take the drink and finish it completely. Your body begins to weaken and you lie down in bed, slowly fading off into the beyond. Your friends admire your conviction and praise your ideas. Your students, Plato ane Xenophon, catalogue the tale of your death and the name Socrates is forever engrained in history as one of the true great Philosophers.")
+                                        $("#mainText").html("You take the drink and finish it completely. Your body begins to weaken and you lie down in bed, slowly fading off into the beyond. Your associates admire your conviction and praise your ideas. Your students, Plato and Xenophon, catalogue the tale of your death and the name Socrates is forever engrained in history as one of the true great Philosophers.")
                                         toResultsButton();
 
                                         $(".resultsButton").on("click", function () {
@@ -421,7 +421,7 @@ $("document").ready(function () {
                                         yourChoices.push("You tried to run")
 
                                         subtitleChoice();
-                                        $("#mainText").html("As you begin to bring the glass of poison to your mouth. The fear of eternal death grips your heart. You refuse to follow through and try to escape in panic. Guards seize you and the jury declares you are taken out and beaten in the streets. Your death is gruesome and shameful. Your actions and words seems contradictory to everyone and your teachings are forgotten.")
+                                        $("#mainText").html("As you begin to bring the glass of poison to your mouth. The fear of eternal death grips your heart. You refuse to follow through and try to escape in panic. Guards seize you and the jury declares you are to be taken out and beaten in the streets. Your death is gruesome and shameful. Your actions and words seems contradictory to everyone and your teachings are forgotten.")
                                         toResultsButton();
 
                                         $(".resultsButton").on("click", function () {
@@ -448,7 +448,7 @@ $("document").ready(function () {
                         yourChoices.push("You made a new suggestion")
 
                         subtitleChoice();
-                        $("#mainText").html("You take a moment to ponder what suggestion to recommend to the jury. Suddenly, a brilliant new idea comes to your mind and you know exactly what you want to say. What do you wish to tell the jury?")
+                        $("#mainText").html("You take a moment to ponder what suggestion to recommend to the jury. Suddenly, a brilliant new idea comes to your mind and you know exactly what you want to say. What do you wish to tell them?")
                         $("#mainText").append('<input type="text" class="form-control my-2" id="inputSuggestion" placeholder="type here">');
 
                         $("#button1").html("");
@@ -517,13 +517,13 @@ $("document").ready(function () {
                                 yourChoices.push("You attacked the guards first")
 
                                 subtitleChoice();
-                                $("#mainText").html("You turn to the guards as they both rush towards you. One grabs his spear and jabs it at you, but you quickly turn to the side and it barely grazes your chest. You throw one arm up and grab his weapon while using the other to smash his hands with your fist. You take the spear and use the blunt end to knock out the second guard. You then swing it around, breaking the spear in half over the back of the first guard's neck. Both men are now laying on the floor, out cold.")
+                                $("#mainText").html("You turn to the guards as they both rush towards you. One grabs his spear and makes a jab, but you quickly turn to the side and it barely grazes your chest. You throw one arm up and grab his weapon while using the other to smash his hands with your fist. You take the spear and use the blunt end to knock out the second guard. You then swing it around, breaking the spear in half over the back of the first guard's neck. Both men are now laying on the floor, out cold.")
                                 $("#button3").html("");
                                 $("#button4").html('<span class="btn btn-light nextButton text-primary">Next</span>');
 
                                 $(".nextButton").on("click", function () {
 
-                                    $("#mainText").html("You then grab a knife off a fallen guard and head towards the jury as they try to back away. You grab the accuser, Lycon, by his robe and pull your knife up to his throat. You look into his eyes as he cowers in fear. What do you do with him?")
+                                    $("#mainText").html("You then grab a knife off a fallen guard and head towards the jury as they try to back away. You grab the accuser, Lycon, by his robe and pull your knife up to his neck. You look into his eyes as he cowers in fear. What do you do with him?")
                                     $("#button3").html('<span class="btn btn-primary killButton">Kill</span>');
                                     $("#button4").html('<span class="btn btn-primary noKillButton">Spare</span>');
 
@@ -551,7 +551,7 @@ $("document").ready(function () {
                                         yourChoices.push("You spared Lycon")
 
                                         subtitleChoice();
-                                        $("#mainText").html('As you hold the knife firmly against his throat, you yell out to the crowd,"Men have laws to keep order and seek out justice. But what do we do when the law itself becomes unjust? If law determines that the pursuit of knowledge is a crime, then it must be broken!" You lower the knife and release Lycon. Then, you turn towards an opening and walk out slowly, no one daring to interfere. You leave the city, with friends and students following behind. You are forever remembered as both a great Philosopher and a noble warrior.')
+                                        $("#mainText").html('As you hold the knife firmly against his throat, you yell out to the crowd, "Men have laws to keep order and seek out justice. But what do we do when the law itself becomes unjust? If law determines that the pursuit of knowledge is a crime, then it must be broken!" You lower the knife and release Lycon. Then, you turn towards an opening and walk out slowly, no one daring to interfere. You leave the city, with friends and students following behind. You are forever remembered as both a great Philosopher and a noble warrior.')
                                         toResultsButton();
 
                                         $(".resultsButton").on("click", function () {
