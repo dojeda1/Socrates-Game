@@ -20,3 +20,9 @@ body {
     font-family: 'IM Fell French Canon',
         serif;
 }
+
+@media screen and (max-width: 640px) {
+    .mobilePadding {
+        padding: 0px;
+    }
+}
