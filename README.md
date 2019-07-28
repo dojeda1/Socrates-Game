@@ -6,6 +6,8 @@ This is a text based adventure game inspired by the ancient tale of when Socrate
 
   **Visit Web App [Here!](https://dojeda1.github.io/Socrates-Game/)**
 
+![Web App Image](./demo.png)
+
 ### Technologies used
 
 * HTML
